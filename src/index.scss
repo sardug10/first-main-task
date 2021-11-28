@@ -142,6 +142,7 @@ body {
     &--upper{
         height: 30%;
         padding: 2rem;
+        box-shadow: 2px 2px 5px $color-gray;
 
         @include respond(f-hundred){
           padding: 1.5rem;
