@@ -1,0 +1,188 @@
+{
+  "data":[
+    {
+      "category":"Choice of Bread",
+      "limit":1,
+      "optional":false,
+      "choices":[
+        {
+          "name":"Multigrain Bread",
+          "available":true
+        },
+        {
+          "name":"Multigrain Honey Oats Bread",
+          "available":true
+        },
+        {
+          "name":"Italian Bread",
+          "available":false
+        },
+        {
+          "name":"Roasted Garlic Bread",
+          "available":false
+        },
+        {
+          "name":"Parmesan Oregano Bread",
+          "available":false
+        },
+        {
+          "name":"Flat Bread",
+          "available":true
+        }
+      ]
+    },
+    {
+      "category":"Choice of Preparation",
+      "limit":1,
+      "optional":false,
+      "choices":[
+        {
+          "name":"Plain Bread",
+          "available":true
+        },
+        {
+          "name":"Plain Bread With Cheese Slice",
+          "available":true
+        },
+        {
+          "name":"Toasted Bread",
+          "available":true
+        },
+        {
+          "name":"Toasted Bread With Cheese Slice",
+          "available":true
+        },
+        {
+          "name":"Toasted With Mozzarella Cheese",
+          "available":false
+        }
+      ]
+    },
+    {
+      "category":"Choice of Beverages",
+      "limit":-1,
+      "optional":true,
+      "choices":[
+        {
+          "name":"Life Juice (250 Ml, Raw Pressery) Pet Bottle",
+          "price":142.86,
+          "available":false
+        },
+        {
+          "name":"Pomegranate Juice (250 Ml, Raw Pressery) Pet Bottle",
+          "price":142.86,
+          "available":false
+        },
+        {
+          "name":"Valencia Orange Juice (250 Ml, Raw Pressery) Pet Bottle",
+          "price":95.84,
+          "available":false
+        },
+        {
+          "name":"Mixed Fruits Juice (250 Ml, Raw Pressery) Pet Bottle",
+          "price":76.19,
+          "available":false
+        },
+        {
+          "name":"Sugarcane Juice (250 Ml, Raw Pressery) Pet Bottle",
+          "price":76.19,
+          "available":false
+        },
+        {
+          "name":"Choco Mint Protein Milkshake (200ml, Raw Pressery) Pet Bottle",
+          "price":76.19,
+          "available":false
+        }
+      ]
+    },
+    {
+      "category":"Choice of Vegetables",
+      "limit":-1,
+      "optional":true,
+      "choices":[
+        {
+          "name":"Lettuce",
+          "available":true
+        },
+        {
+          "name":"Tomato",
+          "available":true
+        },
+        {
+          "name":"Cucumber",
+          "available":true
+        },
+        {
+          "name":"Pickle",
+          "available":true
+        },
+        {
+          "name":"Olives",
+          "available":false
+        },
+        {
+          "name":"Jalapenos",
+          "available":true
+        }
+      ]
+    },
+    {
+      "category":"Choice of Sauce",
+      "limit":3,
+      "optional":true,
+      "choices":[
+        {
+          "name":"Mayonnaise",
+          "available":true
+        },
+        {
+          "name":"Mint Mayonnaise",
+          "available":true
+        },
+        {
+          "name":"Chipotle South West",
+          "available":true
+        },
+        {
+          "name":"Honey Mustard",
+          "available":true
+        },
+        {
+          "name":"Tandoori Mayo",
+          "available":false
+        },
+        {
+          "name":"Marinara",
+          "available":true
+        }
+      ]
+    },
+    {
+      "category":"Add On",
+      "limit":-1,
+      "optional":true,
+      "choices":[
+        {
+          "name":"Cheese Slice",
+          "price":23.81,
+          "available":true
+        },
+        {
+          "name":"Mozzarella Cheese",
+          "price":23.81,
+          "available":true
+        },
+        {
+          "name":"Egg",
+          "price":42.86,
+          "available":true
+        },
+        {
+          "name":"Veg Protein",
+          "price":57.14,
+          "available":false
+        }
+      ]
+    }
+  ]
+}

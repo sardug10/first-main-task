@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;600&display=swap');
+
+$color-gray:#d0d0d0;
+$color-dark-gray:#777777;
+$color-white:#fcfcfc;
+$color-black:#0d0d0d;
+$color-green:#60b246;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@mixin respond($breakpoint) {
+
+    @if $breakpoint == small-phone {
+      @media only screen and (max-width: 25em) {
+        @content;
+      } //400px
+    }
+
+    @if $breakpoint == f-hundred {
+      @media only screen and (max-width: 31.25em) {
+        @content;
+      } //500px
+    }
+  
+    @if $breakpoint == phone {
+      @media only screen and (max-width: 37.5em) {
+        @content;
+      } //600px
+    }
+
+    @if $breakpoint == s-hundred {
+      @media only screen and (max-width: 43.75em) {
+        @content;
+      } //700px
+    }
+  
+    @if $breakpoint == e-hundred {
+      @media only screen and (max-width: 50em) {
+        @content;
+      } //800px
+    }
+  
+    @if $breakpoint == tab-port {
+      @media only screen and (max-width: 56.25em) {
+        @content;
+      } //900px
+    }
+  
+    @if $breakpoint == thousand {
+      @media only screen and (max-width: 62.5em) {
+        @content;
+      } //1000px
+    }
+  
+    @if $breakpoint == el-hundred {
+      @media only screen and (max-width: 68.75em) {
+        @content;
+      } // 1100 px
+    }
+  
+    @if $breakpoint == tab-land {
+      @media only screen and (max-width: 75em) {
+        @content;
+      } //1200px
+    }
+  
+    @if $breakpoint == big-desktop {
+      @media only screen and (min-width: 112.5em) {
+        @content;
+      } //1800
+    }
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+  
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: $color-gray;
+}
+
+.App{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+.modal{
+    position: absolute;
+    background-color: $color-white;
+    height: 50rem;
+    width: 55rem;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+
+    &__error{
+      position: absolute;
+      color: $color-white;
+      bottom: 20%;
+      height: 4rem;
+      width: 55rem;
+      background-color: red;
+      font-size: 1.2rem;
+      padding: 1.2rem 3rem;
+      transition: bottom 3s;
+      transition-delay: .3s;
+    }
+
+    &--upper{
+        height: 30%;
+        padding: 2rem;
+    }
+    &--middle{
+        height: 50%;
+        // background-color: green;
+        padding: 2.2rem;
+        overflow-y: scroll;
+    }
+    &--bottom{
+        height: 20%;
+        padding: 1.2rem 2.5rem;
+        // background-color: red;
+    }
+}
+
+.modalSummary{
+  &__div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &--lower{
+      margin-top: 1.2rem;
+      border-top: 1px dotted $color-dark-gray;
+      padding: 1.2rem 0;
+    }
+  }
+
+  &__link{
+    text-decoration: none;
+    color: $color-dark-gray;
+  }
+
+  &__heading{
+    font-size: 1.6rem;
+    margin-right: auto;
+  }
+  &__icon{
+    transform: scale(2.5);
+    cursor: pointer;
+    -webkit-text-stroke: 1.5px white;
+  }
+  &__price{
+    font-size: 1.4rem;
+    margin-left: 2.5rem;
+  }
+  &__food-mark{
+    height: 1.25rem;
+    margin-right: 1.2rem;
+  }
+  &__category-list{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  &__category{
+    color: $color-dark-gray;
+    cursor: pointer;
+    &:hover{
+      color: $color-black;
+      font-weight: 700;
+    }
+    &:not(:first-child){
+      margin-left: 1.2rem;
+    }
+    &:not(:last-child){
+      margin-right: 1.2rem;
+    }
+    &:first-child{
+      list-style: none;
+    }
+  }
+}
+
+.modalCta{
+  &__info,
+  &__btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // margin-top: 1rem;
+  }
+  &__info{
+    margin-bottom: 1.5rem;
+  }
+  &__items{
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: $color-dark-gray;
+  }
+  &__addOn{
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: $color-black;
+  }
+  &__btn{
+    background-color: #60b246;
+    cursor: pointer;
+    padding: 1.2rem;
+  }
+  &__price,
+  &__text{
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: $color-white;
+  }
+  &__text{
+    text-transform: uppercase;
+  }
+}
+
+.modalItems{
+
+
+  &__heading{
+    font-size: 1.5rem;
+    margin-left: 2.5rem;
+    font-weight: 600;
+    color: $color-black;
+    display: inline-block;
+    margin-right: .5rem;
+  }
+
+  &__optional{
+    font-size: 1.1rem;
+  }
+
+  &__div{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+    margin: 1rem 0;
+
+    &--disable{
+      pointer-events: none;
+    }
+  }
+
+  &__label{
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: $color-black;
+    margin:0 1.2rem;
+    cursor: pointer;
+
+    &--disable{
+      color: $color-dark-gray;
+    }
+  }
+  &__price{
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: $color-dark-gray;
+  }
+  &__tag{
+    font-size: 1rem;
+    margin-left: auto;
+    color: $color-dark-gray;
+    // flex-basis: 100%;
+  }
+  input[type='radio']:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #d1d3d1;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+  }
+  input[type='radio']:checked:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: $color-green;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+  }
+}
