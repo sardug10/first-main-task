@@ -35,12 +35,38 @@ body {
           transform: translate(-50%, -50%);
 }
 
+@media only screen and (max-width: 43.75em) {
+  .modal {
+    width: 50rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .modal {
+    width: 45rem;
+  }
+}
+
+@media only screen and (max-width: 31.25em) {
+  .modal {
+    width: 37.5rem;
+    height: 55rem;
+  }
+}
+
+@media only screen and (max-width: 25em) {
+  .modal {
+    width: 35rem;
+    height: 55rem;
+  }
+}
+
 .modal__error {
   position: absolute;
   color: #fcfcfc;
   bottom: 20%;
   height: 4rem;
-  width: 55rem;
+  width: 100%;
   background-color: red;
   font-size: 1.2rem;
   padding: 1.2rem 3rem;
@@ -50,15 +76,41 @@ body {
           transition-delay: .3s;
 }
 
+@media only screen and (max-width: 31.25em) {
+  .modal__error {
+    font-size: 1rem;
+    padding: 1rem 2.2rem;
+  }
+}
+
 .modal--upper {
   height: 30%;
   padding: 2rem;
+}
+
+@media only screen and (max-width: 31.25em) {
+  .modal--upper {
+    padding: 1.5rem;
+    height: 25%;
+  }
 }
 
 .modal--middle {
   height: 50%;
   padding: 2.2rem;
   overflow-y: scroll;
+}
+
+@media only screen and (max-width: 31.25em) {
+  .modal--middle {
+    height: 55%;
+  }
+}
+
+@media only screen and (max-width: 25em) {
+  .modal--middle {
+    padding: 2rem 1.5rem;
+  }
 }
 
 .modal--bottom {
@@ -94,6 +146,18 @@ body {
   margin-right: auto;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .modalSummary__heading {
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (max-width: 31.25em) {
+  .modalSummary__heading {
+    font-size: 1.1rem;
+  }
+}
+
 .modalSummary__icon {
   -webkit-transform: scale(2.5);
           transform: scale(2.5);
@@ -111,6 +175,12 @@ body {
   margin-right: 1.2rem;
 }
 
+@media only screen and (max-width: 25em) {
+  .modalSummary__food-mark {
+    margin-right: .8rem;
+  }
+}
+
 .modalSummary__category-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -119,6 +189,12 @@ body {
       flex-wrap: wrap;
   font-size: 1rem;
   font-weight: 400;
+}
+
+@media only screen and (max-width: 31.25em) {
+  .modalSummary__category-list {
+    font-size: .9rem;
+  }
 }
 
 .modalSummary__category {
@@ -196,6 +272,12 @@ body {
   margin-right: .5rem;
 }
 
+@media only screen and (max-width: 31.25em) {
+  .modalItems__heading {
+    font-size: 1.2rem;
+  }
+}
+
 .modalItems__optional {
   font-size: 1.1rem;
 }
@@ -224,6 +306,25 @@ body {
   color: #0d0d0d;
   margin: 0 1.2rem;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .modalItems__label {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 31.25em) {
+  .modalItems__label {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 25em) {
+  .modalItems__label {
+    font-size: .8rem;
+    margin: 0 .8rem;
+  }
 }
 
 .modalItems__label--disable {

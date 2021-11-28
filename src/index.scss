@@ -102,28 +102,65 @@ body {
     top: 50%;
     transform: translate(-50%,-50%);
 
+    @include respond(s-hundred){
+      width: 50rem;
+    }
+
+    @include respond(phone){
+      width: 45rem;
+    }
+
+    @include respond(f-hundred){
+      width: 37.5rem;
+      height: 55rem;
+    }
+
+    @include respond(small-phone){
+      width: 35rem;
+      height: 55rem;
+    }
+
     &__error{
       position: absolute;
       color: $color-white;
       bottom: 20%;
       height: 4rem;
-      width: 55rem;
+      // width: 55rem;
+      width: 100%;
       background-color: red;
       font-size: 1.2rem;
       padding: 1.2rem 3rem;
       transition: bottom 3s;
       transition-delay: .3s;
+
+      @include respond(f-hundred){
+        font-size: 1rem;
+        padding: 1rem 2.2rem;
+      }
     }
 
     &--upper{
         height: 30%;
         padding: 2rem;
+
+        @include respond(f-hundred){
+          padding: 1.5rem;
+          height: 25%;
+        }
     }
     &--middle{
         height: 50%;
         // background-color: green;
         padding: 2.2rem;
         overflow-y: scroll;
+
+        @include respond(f-hundred){
+          height: 55%;
+        }
+
+        @include respond(small-phone){
+          padding: 2rem 1.5rem;
+        }
     }
     &--bottom{
         height: 20%;
@@ -153,6 +190,14 @@ body {
   &__heading{
     font-size: 1.6rem;
     margin-right: auto;
+
+    @include respond(phone){
+      font-size: 1.4rem;
+    }
+
+    @include respond(f-hundred){
+      font-size: 1.1rem;
+    }
   }
   &__icon{
     transform: scale(2.5);
@@ -166,12 +211,20 @@ body {
   &__food-mark{
     height: 1.25rem;
     margin-right: 1.2rem;
+
+    @include respond(small-phone){
+      margin-right: .8rem;
+    }
   }
   &__category-list{
     display: flex;
     flex-wrap: wrap;
     font-size: 1rem;
     font-weight: 400;
+
+    @include respond(f-hundred){
+      font-size: .9rem;
+    }
   }
   &__category{
     color: $color-dark-gray;
@@ -239,6 +292,10 @@ body {
     color: $color-black;
     display: inline-block;
     margin-right: .5rem;
+
+    @include respond(f-hundred){
+      font-size: 1.2rem;
+    }
   }
 
   &__optional{
@@ -264,6 +321,19 @@ body {
     color: $color-black;
     margin:0 1.2rem;
     cursor: pointer;
+
+    @include respond(phone){
+      font-size: 1.2rem;
+    }
+
+    @include respond(f-hundred){
+      font-size: 1rem;
+    }
+
+    @include respond(small-phone){
+      font-size: .8rem;
+      margin: 0 .8rem;
+    }
 
     &--disable{
       color: $color-dark-gray;
